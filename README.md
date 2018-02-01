@@ -2,6 +2,9 @@
 
 Adds syntax highlight support for html placed in es6 multiline strings
 
+## Installation
+- Install `es6-string-html` from extensions (`ctrl + shift + x`)
+
 ## Example
 
 ![Example](docs/demo.jpg)
