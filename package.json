@@ -1,0 +1,42 @@
+{
+  "name": "es6-string-html",
+  "displayName": "es6-string-html",
+  "description": "Highlight html in es6 multiline strings",
+  "version": "1.0.0",
+  "publisher": "Tobermory",
+  "icon": "docs/logo.png",
+  "engines": {
+    "vscode": "^1.19.0"
+  },
+  "galleryBanner": {
+    "color": "#dedede",
+    "theme": "light"
+  },
+  "repository": {
+    "url": "https://github.com/mydesireiscoma/es6-string-html"
+  },
+  "bugs": {
+    "url": "https://github.com/mydesireiscoma/es6-string-html/issues"
+  },
+  "categories": ["Languages"],
+  "keywords": ["javascript", "es6", "es6-string-html", "html", "template"],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "text.html.basic"
+        ],
+        "scopeName": "inline.es6-html",
+        "path": "./syntaxes/es6-inline-html.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.html": "html"
+        }
+      }
+    ]
+  }
+}

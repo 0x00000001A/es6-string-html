@@ -1,0 +1,37 @@
+{
+  "fileTypes": [
+    "js",
+    "jsx",
+    "ts",
+    "tsx"
+  ],
+	"injectionSelector": "L:source.js -comment -string, L:source.jsx -comment -string,  L:source.js.jsx -comment -string, L:source.ts -comment -string, L:source.tsx -comment -string",
+	"injections": {
+		"L:source": {
+			"patterns": [
+				{
+					"match": "<",
+					"name": "invalid.illegal.bad-angle-bracket.html"
+				}
+			]
+		}
+	},
+	"patterns": [
+		{
+			"contentName": "meta.embedded.block.html",
+			"begin": "(\\/\\*(html|template|inline-html|inline-template)\\*\\/)(`)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.comment.js"
+				}
+			},
+			"end": "(`)",
+			"patterns": [
+				{
+					"include": "text.html.basic"
+				}
+			]
+		}
+	],
+	"scopeName": "inline.es6-html"
+}
