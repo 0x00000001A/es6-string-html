@@ -26,6 +26,10 @@ Adds syntax highlight support for html placed in es6 multiline strings
 
 Initial release. Simple syntax highlight
 
+### 1.0.1
+
+Compatibility with prettier
+
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
