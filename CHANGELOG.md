@@ -12,3 +12,7 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ## [1.0.1] - 2018-03-08
 ### Fixed
 - Compatibility with Prettier
+
+## [1.0.2] - 2018-03-12
+### Added
+- Commands and keybindings
