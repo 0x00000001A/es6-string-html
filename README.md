@@ -12,8 +12,9 @@ Adds syntax highlight support for html placed in es6 multiline strings
 
 ## Usage
 
-Simply insert the comment /*html*/ (see Requirements "section" for possible values)
-or select `Insert es6-string-html comment/template` from the commands menu
+Simply insert the comment /\*html\*/ or `html` before the string
+(see Requirements "section" for possible values) or select
+`Insert es6-string-html comment/template` from the commands menu
 (`ctrl+shift+p` or `f1`)
 
 > Tip: Comment in the beginning of es6 string is required
@@ -26,6 +27,8 @@ or select `Insert es6-string-html comment/template` from the commands menu
 - - `/*inline-html*/`
 - - `/*template*/`
 - - `/*inline-template*/`
+- Or
+- - `html` before the string
 
 ## Keybindings
 - `ctrl+shift+h` - Insert `/*html*/`
@@ -39,17 +42,18 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 
 ## Release Notes
 
-### 1.0.0
+### [1.0.0] - 2018-02-02
+- Syntax highlighting for html in es6 multiline strings
 
-Initial release. Simple syntax highlight
+### [1.1.0] - 2018-03-08
+- Compatibility with Prettier
 
-### 1.0.1
+### [1.2.0] - 2018-03-12
+- Commands and keybindings
 
-Compatibility with prettier
-
-### 1.0.2
-
-Commands and keybindings
+### [1.3.0] - 2018-03-17
+- Syntax highlight without a comment
+- Follow semver
 
 -----------------------------------------------------------------------------------------------------------
 
