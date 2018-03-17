@@ -19,7 +19,7 @@
 	"patterns": [
 		{
 			"contentName": "meta.embedded.block.html",
-			"begin": "(\\s?\\/\\*\\s?(html|template|inline-html|inline-template)\\s?\\*\\/\\s?)(`)",
+			"begin": "(\\s?\\/?\\*?\\s?(html|template|inline-html|inline-template)\\s?\\*?\\/?\\s?)(`)",
 			"beginCaptures": {
 				"1": {
 					"name": "punctuation.definition.comment.js"
