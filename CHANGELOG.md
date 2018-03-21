@@ -26,3 +26,7 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### Added
 - JS Syntax highlight
 - Single-line comment support
+
+### [1.5.0] - 2018-03-22
+### Fixed
+- Compatibility with Prettier

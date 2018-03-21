@@ -59,6 +59,9 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 - JS Syntax highlight
 - Single-line comment support
 
+### [1.5.0] - 2018-03-22
+- Compatibility with Prettier
+
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
