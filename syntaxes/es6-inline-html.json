@@ -27,6 +27,9 @@
 			"end": "(`)",
 			"patterns": [
 				{
+					"include": "source.ts#template-substitution-element"
+				},
+				{
 					"include": "text.html.basic"
 				}
 			]
@@ -43,6 +46,9 @@
 				{
 					"begin": "(\\G)",
 					"end": "(`)"
+				},
+				{
+					"include": "source.ts#template-substitution-element"
 				},
 				{
 					"include": "text.html.basic"
