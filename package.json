@@ -2,7 +2,7 @@
   "name": "es6-string-html",
   "displayName": "es6-string-html",
   "description": "Highlight html in es6 multiline strings",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "publisher": "Tobermory",
   "icon": "docs/logo.png",
   "engines": {

@@ -1,4 +1,4 @@
-# es6-string-html
+# ES6 String HTML
 
 Adds syntax highlight support for html placed in es6 multiline strings
 
@@ -8,7 +8,7 @@ Adds syntax highlight support for html placed in es6 multiline strings
 
 ## Example
 
-![Example](docs/demo.jpg)
+![Example](docs/demo.png)
 
 ## Usage
 
@@ -54,6 +54,10 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 ### [1.3.0] - 2018-03-17
 - Syntax highlight without a comment
 - Follow semver
+
+### [1.4.0] - 2018-03-22
+- JS Syntax highlight
+- Single-line comment support
 
 -----------------------------------------------------------------------------------------------------------
 

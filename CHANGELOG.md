@@ -21,3 +21,8 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### Added
 - Syntax highlight without a comment
 - Follow semver
+
+### [1.4.0] - 2018-03-22
+### Added
+- JS Syntax highlight
+- Single-line comment support
