@@ -18,7 +18,6 @@
 	},
 	"patterns": [
 		{
-			"contentName": "meta.embedded.block.html",
 			"begin": "(\\s?\\/?\\*?\\s?(html|template|inline-html|inline-template)\\s?\\*?\\/?\\s?)(`)",
 			"beginCaptures": {
 				"1": {
@@ -27,6 +26,24 @@
 			},
 			"end": "(`)",
 			"patterns": [
+				{
+					"include": "text.html.basic"
+				}
+			]
+		},
+		{
+			"begin": "(\\/\\/(html|template|inline-html|inline-template))",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.comment.js"
+				}
+			},
+			"end": "(`)",
+			"patterns": [
+				{
+					"begin": "(\\G)",
+					"end": "(`)"
+				},
 				{
 					"include": "text.html.basic"
 				}
