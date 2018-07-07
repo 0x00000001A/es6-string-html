@@ -1,4 +1,4 @@
-# ES6 String HTML
+# ES6 String HTML (VSCode Marketplace)[https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html]
 
 Adds syntax highlight support for html placed in es6 multiline strings
 
