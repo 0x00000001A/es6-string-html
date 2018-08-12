@@ -1,0 +1,60 @@
+{
+  "fileTypes": [
+    "js",
+    "jsx",
+    "ts",
+    "tsx"
+  ],
+	"injectionSelector": "L:source.js -comment -string, L:source.jsx -comment -string,  L:source.js.jsx -comment -string, L:source.ts -comment -string, L:source.tsx -comment -string",
+	"injections": {
+		"L:source": {
+			"patterns": [
+				{
+					"match": "<",
+					"name": "invalid.illegal.bad-angle-bracket.html"
+				}
+			]
+		}
+	},
+	"patterns": [
+		{
+			"begin": "(\\s?\\/?\\*?\\s?(sql|inline-sql)\\s?\\*?\\/?\\s?)(`)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.comment.js"
+				}
+			},
+			"end": "(`)",
+			"patterns": [
+				{
+					"include": "source.ts#template-substitution-element"
+				},
+				{
+					"include": "source.sql"
+				}
+			]
+		},
+		{
+			"begin": "(\\/\\/\\s?(sql|inline-sql)\\s?)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.comment.js"
+				}
+			},
+			"end": "(`)",
+			"patterns": [
+				{
+					"begin": "(\\G)",
+					"end": "(`)"
+				},
+				{
+					"include": "source.ts#template-substitution-element"
+				},
+				{
+					"include": "source.sql"
+				}
+			]
+		}
+	],
+	"scopeName": "inline.es6-sql"
+}

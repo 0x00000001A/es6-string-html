@@ -1,7 +1,9 @@
 # ES6 String HTML 
 > [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
 
-Adds syntax highlight support for html placed in es6 multiline strings
+Adds syntax highlight support for code, placed in es6 multiline strings:
+- HTML
+- SQL
 
 ## Installation
 
@@ -13,7 +15,7 @@ Adds syntax highlight support for html placed in es6 multiline strings
 
 ## Usage
 
-Simply insert the comment /\*html\*/ or `html` before the string
+Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before the string
 (see Requirements "section" for possible values) or select
 `Insert es6-string-html comment/template` from the commands menu
 (`ctrl+shift+p` or `f1`)
@@ -62,6 +64,9 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 
 ### [1.5.0] - 2018-03-22
 - Compatibility with Prettier
+
+### [1.6.0] - 2018-08-13
+- Add SQL support. Beta
 
 -----------------------------------------------------------------------------------------------------------
 

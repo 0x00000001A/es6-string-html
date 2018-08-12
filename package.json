@@ -1,8 +1,8 @@
 {
   "name": "es6-string-html",
   "displayName": "es6-string-html",
-  "description": "Highlight html in es6 multiline strings",
-  "version": "1.5.0",
+  "description": "Highlight different languages in es6 multiline strings",
+  "version": "1.6.0",
   "publisher": "Tobermory",
   "icon": "docs/logo.png",
   "engines": {
@@ -19,8 +19,16 @@
     "url": "https://github.com/mydesireiscoma/es6-string-html/issues"
   },
   "main": "./scripts/main",
-  "categories": ["Languages"],
-  "keywords": ["javascript", "es6", "es6-string-html", "html", "template"],
+  "categories": [
+    "Languages"
+  ],
+  "keywords": [
+    "javascript",
+    "es6",
+    "es6-string-html",
+    "html",
+    "template"
+  ],
   "activationEvents": [
     "onCommand:es6stringhtml.insertComment",
     "onCommand:es6stringhtml.insertTemplate"
@@ -66,6 +74,21 @@
         "path": "./syntaxes/es6-inline-html.json",
         "embeddedLanguages": {
           "meta.embedded.block.html": "html"
+        }
+      },
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "source.sql"
+        ],
+        "scopeName": "inline.es6-sql",
+        "path": "./syntaxes/es6-inline-sql.json",
+        "embeddedLanguages": {
+          "meta.embedded.sql": "sql"
         }
       }
     ]

@@ -30,3 +30,7 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### [1.5.0] - 2018-03-22
 ### Fixed
 - Compatibility with Prettier
+
+### [1.6.0] - 2018-08-13
+### Added
+- SQL support. Beta
