@@ -68,6 +68,12 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 ### [1.6.0] - 2018-08-13
 - Add SQL support. Beta
 
+### [1.6.0] - 2018-08-13
+- Improve support for html function
+
+### [1.7.0] - 2018-08-14
+- Improve html function support
+
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**

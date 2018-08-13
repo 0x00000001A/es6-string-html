@@ -18,10 +18,27 @@
 	},
 	"patterns": [
 		{
+			"begin": "(.?(sql))(`)",
+			"end": "(`)",
+			"beginCaptures": {
+				"1": {
+					"name": "variable.parameter"
+				}
+			},
+			"patterns": [
+				{
+					"include": "source.ts#template-substitution-element"
+				},
+				{
+					"include": "source.sql"
+				}
+			]
+		},
+		{
 			"begin": "(\\s?\\/?\\*?\\s?(sql|inline-sql)\\s?\\*?\\/?\\s?)(`)",
 			"beginCaptures": {
 				"1": {
-					"name": "punctuation.definition.comment.js"
+					"name": "comment.block"
 				}
 			},
 			"end": "(`)",
@@ -38,7 +55,7 @@
 			"begin": "(\\/\\/\\s?(sql|inline-sql)\\s?)",
 			"beginCaptures": {
 				"1": {
-					"name": "punctuation.definition.comment.js"
+					"name": "comment.line"
 				}
 			},
 			"end": "(`)",

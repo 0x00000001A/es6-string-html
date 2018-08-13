@@ -18,10 +18,27 @@
 	},
 	"patterns": [
 		{
+			"begin": "(.?(html|template))(`)",
+			"end": "(`)",
+			"beginCaptures": {
+				"1": {
+					"name": "variable.parameter"
+				}
+			},
+			"patterns": [
+				{
+					"include": "source.ts#template-substitution-element"
+				},
+				{
+					"include": "text.html.basic"
+				}
+			]
+		},
+		{
 			"begin": "(\\s?\\/?\\*?\\s?(html|template|inline-html|inline-template)\\s?\\*?\\/?\\s?)(`)",
 			"beginCaptures": {
 				"1": {
-					"name": "punctuation.definition.comment.js"
+					"name": "comment.block"
 				}
 			},
 			"end": "(`)",
@@ -38,7 +55,7 @@
 			"begin": "(\\/\\/\\s?(html|template|inline-html|inline-template)\\s?)",
 			"beginCaptures": {
 				"1": {
-					"name": "punctuation.definition.comment.js"
+					"name": "comment.line"
 				}
 			},
 			"end": "(`)",
