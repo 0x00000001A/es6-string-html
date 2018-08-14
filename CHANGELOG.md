@@ -38,3 +38,8 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### [1.7.0] - 2018-08-14
 ### Fixed
 - Improve html function support
+
+### [1.7.1] - 2018-08-15
+### Fixed
+- Improve single-line comments support
+- Disable hotkeys

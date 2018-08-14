@@ -74,6 +74,9 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 ### [1.7.0] - 2018-08-14
 - Improve html function support
 
+### [1.7.1] - 2018-08-15
+- Improve single-line comments support
+- Disable hotkeys
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
