@@ -34,20 +34,6 @@
     "onCommand:es6stringhtml.insertTemplate"
   ],
   "contributes": {
-    "keybindings": [
-      {
-        "command": "es6stringhtml.insertComment",
-        "key": "ctrl+shift+h",
-        "mac": "cmd+shift+h",
-        "when": "!terminalFocus"
-      },
-      {
-        "command": "es6stringhtml.insertTemplate",
-        "key": "ctrl+k h",
-        "mac": "cmd+k h",
-        "when": "!terminalFocus"
-      }
-    ],
     "commands": [
       {
         "command": "es6stringhtml.insertComment",
