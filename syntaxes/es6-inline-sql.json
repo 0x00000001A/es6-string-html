@@ -52,7 +52,7 @@
 			]
 		},
 		{
-			"begin": "(\\/\\/\\s?(sql|inline-sql)\\s?$)",
+			"begin": "(?<=\\=|\\:)\\s+(\\/\\/\\s?(sql|inline-sql)\\s?$)",
 			"beginCaptures": {
 				"1": {
 					"name": "comment.line"
