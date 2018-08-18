@@ -2,7 +2,7 @@
 > [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
 
 Adds syntax highlight support for code, placed in es6 multiline strings:
-- HTML
+- HTML (incl. html quoted and unquoted attrs)
 - SQL
 
 ## Community
