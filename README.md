@@ -5,6 +5,9 @@ Adds syntax highlight support for code, placed in es6 multiline strings:
 - HTML
 - SQL
 
+## Community
+- [es6-string-css](https://github.com/bashmish/es6-string-css) - Highlight CSS in ES6 template literals
+
 ## Installation
 
 - Install `es6-string-html` from extensions (`ctrl + shift + x`)
