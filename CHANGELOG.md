@@ -43,3 +43,9 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 - Improve single-line comments support
 - Disable hotkeys
+
+### [1.8.1] - 2018-08-18
+### Added
+- Unquoted attributes support
+### Fixed
+- Js-in-attributes support

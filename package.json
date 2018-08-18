@@ -2,7 +2,7 @@
   "name": "es6-string-html",
   "displayName": "es6-string-html",
   "description": "Highlight different languages in es6 multiline strings",
-  "version": "1.7.1",
+  "version": "1.8.1",
   "publisher": "Tobermory",
   "icon": "docs/logo.png",
   "engines": {
@@ -47,6 +47,22 @@
       }
     ],
     "grammars": [
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "text.html.basic"
+        ],
+        "scopeName": "inline.es6-js-injection",
+        "path": "./syntaxes/es6-js-injection.json",
+        "embeddedLanguages": {
+          "meta.template.expression.ts": "typescript",
+          "meta.template.expression.js": "javascript"
+        }
+      },
       {
         "injectTo": [
           "source.js",

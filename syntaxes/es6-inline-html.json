@@ -5,73 +5,98 @@
     "ts",
     "tsx"
   ],
-	"injectionSelector": "L:source.js -comment -string, L:source.jsx -comment -string,  L:source.js.jsx -comment -string, L:source.ts -comment -string, L:source.tsx -comment -string",
-	"injections": {
-		"L:source": {
-			"patterns": [
-				{
-					"match": "<",
-					"name": "invalid.illegal.bad-angle-bracket.html"
-				}
-			]
-		}
-	},
-	"patterns": [
-		{
-			"begin": "(.?(html|template))(`)",
-			"end": "(`)",
-			"beginCaptures": {
-				"1": {
-					"name": "variable.parameter"
-				}
-			},
-			"patterns": [
-				{
-					"include": "source.ts#template-substitution-element"
-				},
-				{
-					"include": "text.html.basic"
-				}
-			]
-		},
-		{
-			"begin": "(\\s?\\/?\\*?\\s?(html|template|inline-html|inline-template)\\s?\\*?\\/?\\s?)(`)",
-			"beginCaptures": {
-				"1": {
-					"name": "comment.block"
-				}
-			},
-			"end": "(`)",
-			"patterns": [
-				{
-					"include": "source.ts#template-substitution-element"
-				},
-				{
-					"include": "text.html.basic"
-				}
-			]
-		},
-		{
-			"begin": "(?<=\\=|\\:)\\s+(\\/\\/\\s?(html|template|inline-html|inline-template)\\s?$)",
-			"beginCaptures": {
-				"1": {
-					"name": "comment.line"
-				}
-			},
-			"end": "(`)",
-			"patterns": [
-				{
-					"begin": "(\\G)",
-					"end": "(`)"
-				},
-				{
-					"include": "source.ts#template-substitution-element"
-				},
-				{
-					"include": "text.html.basic"
-				}
-			]
-		}
-	],
-	"scopeName": "inline.es6-html"
+  "injectionSelector": "L:source.js -comment -string, L:source.jsx -comment -string,  L:source.js.jsx -comment -string, L:source.ts -comment -string, L:source.tsx -comment -string",
+  "injections": {
+    "L:source": {
+      "patterns": [
+        {
+          "match": "<",
+          "name": "invalid.illegal.bad-angle-bracket.html"
+        }
+      ]
+    }
+  },
+  "patterns": [
+    {
+      "begin": "(.?(html|template))(`)",
+      "end": "(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "variable.parameter"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "text.html.basic"
+        }
+      ]
+    },
+    {
+      "begin": "(\\s?\\/?\\*?\\s?(html|template|inline-html|inline-template)\\s?\\*?\\/?\\s?)(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "text.html.basic"
+        },
+        {
+          "include": "inline.es6-htmlx#template"
+        }
+      ]
+    },
+    {
+      "begin": "(?<=\\=|\\:)\\s+(\\/\\/\\s?(html|template|inline-html|inline-template)\\s?$)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.line"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "begin": "(\\G)",
+          "end": "(`)"
+        },
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "text.html.basic"
+        }
+      ]
+    },
+    {
+      "begin": "(\\${)",
+      "end": "(})",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.tag"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "entity.name.tag"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "source.js"
+        }
+      ]
+    }
+  ],
+  "scopeName": "inline.es6-html"
 }

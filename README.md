@@ -77,6 +77,10 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 ### [1.7.1] - 2018-08-15
 - Improve single-line comments support
 - Disable hotkeys
+
+### [1.8.1] - 2018-08-18
+- Unquoted attributes support
+- Fix js-in-attributes support
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
