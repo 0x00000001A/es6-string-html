@@ -27,8 +27,7 @@
     "es6",
     "es6-string-html",
     "html",
-    "sql",
-    "template"
+    "sql"
   ],
   "activationEvents": [
     "onCommand:es6stringhtml.insertComment",
