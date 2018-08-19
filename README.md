@@ -84,6 +84,9 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 ### [1.8.1] - 2018-08-18
 - Unquoted attributes support
 - Fix js-in-attributes support
+
+### [1.8.2] - 2018-08-19
+- Fix missing `${}` syntax support
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**

@@ -73,8 +73,8 @@
       ]
     },
     {
-      "begin": "(\\${)",
-      "end": "(})",
+      "begin": "(\"?'?\\${)",
+      "end": "(}\"?'?)",
       "beginCaptures": {
         "1": {
           "name": "entity.name.tag"

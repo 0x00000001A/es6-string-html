@@ -1,8 +1,8 @@
 {
   "name": "es6-string-html",
   "displayName": "es6-string-html",
-  "description": "Highlight different languages in es6 multiline strings",
-  "version": "1.8.1",
+  "description": "Syntax highlighting in es6 multiline strings",
+  "version": "1.8.2",
   "publisher": "Tobermory",
   "icon": "docs/logo.png",
   "engines": {
@@ -27,6 +27,7 @@
     "es6",
     "es6-string-html",
     "html",
+    "sql",
     "template"
   ],
   "activationEvents": [
@@ -54,6 +55,7 @@
           "source.jsx",
           "source.ts",
           "source.tsx",
+          "source.sql",
           "text.html.basic"
         ],
         "scopeName": "inline.es6-js-injection",
