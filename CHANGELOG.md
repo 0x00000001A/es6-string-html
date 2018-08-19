@@ -52,4 +52,4 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 
 ### [1.8.2] - 2018-08-19
 ### Fixed
-- Fix missing `${}` syntax support
+- Fix missing `${}` syntax support in sql
