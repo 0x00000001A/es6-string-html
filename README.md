@@ -87,6 +87,9 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 
 ### [1.8.2] - 2018-08-19
 - Fix missing `${}` syntax support in sql
+
+### [1.8.3] - 2018-08-25
+- Fix broken multiline support for jquery
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**

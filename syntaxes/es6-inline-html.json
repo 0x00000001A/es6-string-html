@@ -55,7 +55,7 @@
       ]
     },
     {
-      "begin": "(?<=\\=|\\:)\\s+(\\/\\/\\s?(html|template|inline-html|inline-template)\\s?$)",
+      "begin": "(?<=\\=|\\:|\\$\\()\\s+(\\/\\/\\s?(html|template|inline-html|inline-template)\\s?$)",
       "beginCaptures": {
         "1": {
           "name": "comment.line"
