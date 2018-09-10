@@ -7,6 +7,7 @@ Adds syntax highlight support for code, placed in es6 multiline strings:
 
 ## Community
 - [es6-string-css](https://github.com/bashmish/es6-string-css) - Highlight CSS in ES6 template literals
+- [python-string-html](https://github.com/ptweir/python-string-html) - Highlight code in python multiline strings
 
 ## Installation
 
