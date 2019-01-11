@@ -92,6 +92,9 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 
 ### [1.8.3] - 2018-08-25
 - Fix broken multiline support for jquery
+
+### [1.8.4] - 2019-01-11
+- Add html text as parameter argument support
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
