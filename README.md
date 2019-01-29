@@ -95,6 +95,11 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 
 ### [1.8.4] - 2019-01-11
 - Add html text as parameter argument support
+
+### [1.8.5] - 2019-01-29
+- Highlight html passed directly into a function
+- Highlight html inside html script
+- Support for html passed as an argument
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**

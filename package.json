@@ -2,7 +2,7 @@
   "name": "es6-string-html",
   "displayName": "es6-string-html",
   "description": "Syntax highlighting in es6 multiline strings",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "publisher": "Tobermory",
   "icon": "docs/logo.png",
   "engines": {
@@ -20,7 +20,7 @@
   },
   "main": "./scripts/main",
   "categories": [
-    "Languages"
+    "Programming Languages"
   ],
   "keywords": [
     "javascript",
@@ -49,13 +49,14 @@
     "grammars": [
       {
         "injectTo": [
+          "source.html",
           "source.js",
           "source.js.jsx",
           "source.jsx",
           "source.ts",
           "source.tsx",
           "source.sql",
-          "text.html.basic"
+          "text.html"
         ],
         "scopeName": "inline.es6-js-injection",
         "path": "./syntaxes/es6-js-injection.json",
@@ -66,12 +67,13 @@
       },
       {
         "injectTo": [
+          "source.html",
           "source.js",
           "source.js.jsx",
           "source.jsx",
           "source.ts",
           "source.tsx",
-          "text.html.basic"
+          "text.html"
         ],
         "scopeName": "inline.es6-html",
         "path": "./syntaxes/es6-inline-html.json",
@@ -81,6 +83,7 @@
       },
       {
         "injectTo": [
+          "source.html",
           "source.js",
           "source.js.jsx",
           "source.jsx",

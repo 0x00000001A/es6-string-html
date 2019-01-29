@@ -3,9 +3,10 @@
     "js",
     "jsx",
     "ts",
-    "tsx"
+    "tsx",
+    "html"
   ],
-  "injectionSelector": "L:source.js -comment -string, L:source.jsx -comment -string,  L:source.js.jsx -comment -string, L:source.ts -comment -string, L:source.tsx -comment -string",
+  "injectionSelector": "L:source.js -comment -string, L:source.js -comment -string, L:source.jsx -comment -string,  L:source.js.jsx -comment -string, L:source.ts -comment -string, L:source.tsx -comment -string",
   "injections": {
     "L:source": {
       "patterns": [
@@ -18,7 +19,7 @@
   },
   "patterns": [
     {
-      "begin": "(.?(html|template))(`)",
+      "begin": "(.{1,}?(html|template))(`)",
       "end": "(`)",
       "beginCaptures": {
         "1": {
@@ -35,7 +36,7 @@
       ]
     },
     {
-      "begin": "(\\s?\\/?\\*?\\s?(html|template|inline-html|inline-template)\\s?\\*?\\/?\\s?)(`)",
+      "begin": "(\\s?\\/?\\*?\\(?\\s(html|template|inline-html|inline-template)\\s?\\*?\\/?\\s?)(`)",
       "beginCaptures": {
         "1": {
           "name": "comment.block"
@@ -55,7 +56,7 @@
       ]
     },
     {
-      "begin": "(?<=\\=|\\:|\\(|\\$\\()\\s{0,}(\\/\\/\\s?(html|template|inline-html|inline-template)\\s?$)",
+      "begin": "(?<=\\s|\\,|\\=|\\:|\\(|\\$\\()\\s{0,}(\\/?\\/?\\s?(html|template|inline-html|inline-template)\\s?$)",
       "beginCaptures": {
         "1": {
           "name": "comment.line"
