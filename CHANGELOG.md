@@ -67,3 +67,7 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 - Highlight html passed directly into a function
 - Highlight html inside html script
 - Support for html passed as an argument
+
+### [1.8.6] - 2019-01-31
+## Fixed
+- Improve multiline strings support

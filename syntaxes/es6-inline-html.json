@@ -19,24 +19,27 @@
   },
   "patterns": [
     {
-      "begin": "(.{1,}?(html|template))(`)",
-      "end": "(`)",
+      "begin": "(\\s?\\/\\*\\s?(html|template|inline-html|inline-template)\\s?\\*\\/\\s?)(`)",
       "beginCaptures": {
         "1": {
-          "name": "variable.parameter"
+          "name": "comment.block"
         }
       },
+      "end": "(`)",
       "patterns": [
         {
           "include": "source.ts#template-substitution-element"
         },
         {
           "include": "text.html.basic"
+        },
+        {
+          "include": "inline.es6-htmlx#template"
         }
       ]
     },
     {
-      "begin": "(\\s?\\/?\\*?\\(?\\s(html|template|inline-html|inline-template)\\s?\\*?\\/?\\s?)(`)",
+      "begin": "((html|template|inline-html|inline-template))(`)",
       "beginCaptures": {
         "1": {
           "name": "comment.block"
@@ -57,6 +60,27 @@
     },
     {
       "begin": "(?<=\\s|\\,|\\=|\\:|\\(|\\$\\()\\s{0,}(\\/?\\/?\\s?(html|template|inline-html|inline-template)\\s?$)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.line"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "begin": "(\\G)",
+          "end": "(`)"
+        },
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "text.html.basic"
+        }
+      ]
+    },
+    {
+      "begin": "(?<=\\s|\\,|\\=|\\:|\\(|\\$\\()\\s{0,}(\\/?\\*?\\s?(html|template|inline-html|inline-template)\\s?\\*?\\/?$)",
       "beginCaptures": {
         "1": {
           "name": "comment.line"
