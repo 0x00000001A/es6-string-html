@@ -59,28 +59,7 @@
       ]
     },
     {
-      "begin": "(?<=\\s|\\,|\\=|\\:|\\(|\\$\\()\\s{0,}(\\/?\\/?\\s?(html|template|inline-html|inline-template)\\s?$)",
-      "beginCaptures": {
-        "1": {
-          "name": "comment.line"
-        }
-      },
-      "end": "(`)",
-      "patterns": [
-        {
-          "begin": "(\\G)",
-          "end": "(`)"
-        },
-        {
-          "include": "source.ts#template-substitution-element"
-        },
-        {
-          "include": "text.html.basic"
-        }
-      ]
-    },
-    {
-      "begin": "(?<=\\s|\\,|\\=|\\:|\\(|\\$\\()\\s{0,}(\\/?\\*?\\s?(html|template|inline-html|inline-template)\\s?\\*?\\/?$)",
+      "begin": "(?<=\\s|\\,|\\=|\\:|\\(|\\$\\()\\s{0,}(((\\/\\*)|(\\/\\/))\\s?(html|template|inline-html|inline-template)\\s?\\*?\\/?$)",
       "beginCaptures": {
         "1": {
           "name": "comment.line"
