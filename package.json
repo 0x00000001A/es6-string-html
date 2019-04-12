@@ -2,7 +2,7 @@
   "name": "es6-string-html",
   "displayName": "es6-string-html",
   "description": "Syntax highlighting in es6 multiline strings",
-  "version": "1.8.8",
+  "version": "2.0.0",
   "publisher": "Tobermory",
   "icon": "docs/logo.png",
   "engines": {
@@ -49,20 +49,14 @@
     "grammars": [
       {
         "injectTo": [
-          "source.html",
-          "source.js",
-          "source.js.jsx",
-          "source.jsx",
-          "source.ts",
-          "source.tsx",
-          "source.sql",
-          "text.html"
+          "inline.es6-html"
         ],
         "scopeName": "inline.es6-js-injection",
         "path": "./syntaxes/es6-js-injection.json",
         "embeddedLanguages": {
           "meta.template.expression.ts": "typescript",
-          "meta.template.expression.js": "javascript"
+          "meta.template.expression.js": "javascript",
+          "meta.embedded.block.html": "html"
         }
       },
       {

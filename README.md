@@ -53,11 +53,11 @@ Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before t
 ### [...]
 - See changelog for previous notes
 
-### [1.8.7] - 2019-02-14
-- Fix bug with syntax coloring after keyword, placed inside html template
-
 ### [1.8.8] - 2019-04-12
 - Match all caps for SQL (by @thebrodmann)
+
+### [2.0.0] - 2019-04-12
+- Highlight HTML w/o comments
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
