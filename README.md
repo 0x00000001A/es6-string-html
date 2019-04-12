@@ -53,11 +53,11 @@ Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before t
 ### [...]
 - See changelog for previous notes
 
-### [1.8.6] - 2019-01-31
-- Improve multiline strings support
-
 ### [1.8.7] - 2019-02-14
 - Fix bug with syntax coloring after keyword, placed inside html template
+
+### [1.8.8] - 2019-04-12
+- Match all caps for SQL (by @thebrodmann)
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**

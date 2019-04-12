@@ -75,3 +75,7 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### [1.8.7] - 2019-02-14
 ## Fixed
 - Fix bug with syntax coloring after keyword, placed inside html template
+
+### [1.8.8] - 2019-04-12
+## Improved
+- Match all caps for SQL (by @thebrodmann)
