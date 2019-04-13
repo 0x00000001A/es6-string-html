@@ -17,38 +17,70 @@
       ]
     }
   },
-  "patterns": [
-    {
-      "comment": "Single line strings",
-      "begin": "(\\=|\\:|\\,|\\>)\\s*(`)$",
-      "beginCaptures": {
-        "1": {
-          "name": "entity.name.function.js"
+  "repository": {
+    "highlight-html": {
+      "patterns": [
+        {
+          "include": "#keep-comments"
         },
-        "2": {
-          "name": "string.quoted.template.js"
+        {
+          "include": "#simple-html"
+        },
+        {
+          "include": "#advanced-html"
         }
-      },
-      "end": "\\s*(`)($)",
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.template.js"
-        }
-      },
+      ]
+    },
+    "keep-comments": {
       "patterns": [
         {
           "name": "string.quoted.template.js",
-          "match": "^\\s*([^\\<]*)\\s*$"
-        },
+          "match": "\\s*([^\\<]*)\\s*\\n"
+        }
+      ]
+    },
+    "simple-html": {
+      "patterns": [
         {
-          "begin": "^\\s*(<\\!?\/?)(\\w[^\\s>]*)(?<!/)",
-          "end": "((?: ?/)?>)\\s*$",
+          "comment": "It's matches only tags but not anything inside",
+          "begin": "(<)\\!?([\\w\\s]*)(?<!/)((?: ?/)?>)",
           "beginCaptures": {
             "1": {
               "name": "punctuation.definition.tag.begin.html"
             },
             "2": {
-              "name": "entity.name.tag.html<"
+              "name": "entity.name.tag.html"
+            }
+          },
+          "end": "(<\/)\\!?([\\w\\s]*)(?<!/)((?: ?/)?>)",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html"
+            }
+          },
+          "patterns": [
+            {
+              "include": "text.html.derivative"
+            }
+          ]
+        }
+      ]
+    },
+    "advanced-html": {
+      "patterns": [
+        {
+          "comment": "It's matches only tags but not anything inside",
+          "begin": "(<\/?)\\!?(\\w[^\\s>]*)(?<!/)",
+          "end": "((?: ?/)?>)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html"
             }
           },
           "endCaptures": {
@@ -61,6 +93,77 @@
               "include": "text.html.basic#attribute"
             }
           ]
+        }
+      ]
+    } 
+  },
+  "patterns": [
+    {
+      "comment": "Case: comma on the same line, but HTML is on the next line",
+      "begin": "(\\=|\\:|\\,|\\>)\\s*(`)$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.operator.assignment.js"
+        },
+        "2": {
+          "name": "string.quoted.template.js"
+        }
+      },
+      "end": "\\s*(`)$",
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.template.js"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#highlight-html"
+        }
+      ]
+    },
+    {
+      "comment": "Case: lit",
+      "begin": "(\\s|^|\\W)([_$[:alpha:]][_$[:alnum:]]*)`",
+      "beginCaptures": {
+        "2": {
+          "name": "entity.name.function.js"
+        }
+      },
+      "end": "\\s*(`)$",
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.template.js"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#highlight-html"
+        }
+      ]
+    },
+    {
+      "comment": "Case: singleline",
+      "begin": "(\\=|\\:|\\,|\\>)\\s*(`)\\s*(<)\\!?([\\w\\s]*)(?<!/)((?: ?/)?>)",
+      "beginCaptures": {
+        "3": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "4": {
+          "name": "entity.name.tag.html"
+        }
+      },
+      "end": "(<\/)\\!?([\\w\\s]*)(?<!/)((?: ?/)?>)\\s*(`)$",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.html"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#highlight-html"
         }
       ]
     }

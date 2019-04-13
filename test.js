@@ -2,13 +2,34 @@
 const defaultString1 = "<div>Something</div>"
 const defaultString2 = `String`
 const defaultString3 = `
-asdasd asd asdas dasdasdasd '"adasjk()909 0a9sd09a sdasjkdhksja dhs
-  asdasd
-asdasd
-  'string'
-  "string"
-  <div class="asdasd">value</div>
+asdadasdadasdasdasdasdasdasdasd
+asdasdadad
+<div
+  attr="value"
+  asdasd="asdasdasd"
+>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Hello, world
+    <div>
+      Is there something to do?
+    </div>
+</body>
+</html>
 `
+
+const defaultString4 = `
+  nothing to highlight
+`
+
+const value = `Nothing can be here`
+const value2 = `<div>Something</div>`
 
 const defaultString4 = `
   <div attribute attribute="value" lastattr>asdasd</div>
@@ -44,7 +65,7 @@ const multiline = `
         <title>Document</title>
     </head>
     <body>
-        Hello, world
+        Hello, world <span attr="value">Something</span>
     </body>
     </html>
 `
@@ -64,8 +85,8 @@ function test() {
     return result
 }
 
-const stress1 = `>no ${something} n<HTM>LVariable`
-const stress2 = `<no test('asdasd') } </no>`
+const stress1 = `asdasdasd`
+const stress2 = `<no>asd<div attr="asdad"></div>adasd</no>`
 const stress3 = `<no> ${ test('asdasd') } </no>`
 
 function test() {
@@ -84,24 +105,75 @@ const testSQL = /* sql */`
 `
 
 /*
-
         {
-          "begin": "(\\b)",
-          "end": "(\\b)",
-          "patterns": [
-            {
-              "include": "string.quoted.template.js"
-            }
-          ]
+          "name": "string.quoted.template.js",
+          "match": "^\\s*([^\\<]*)\\s*$"
         },
-,
+        
+ {
+  "fileTypes": [
+    "js",
+    "jsx",
+    "ts",
+    "tsx",
+    "html"
+  ],
+  "injectionSelector": "L:source.js -comment -string, L:source.js -comment -string, L:source.jsx -comment -string,  L:source.js.jsx -comment -string, L:source.ts -comment -string, L:source.tsx -comment -string",
+  "injections": {
+    "L:source": {
+      "patterns": [
         {
-          "begin": "^\\s*(<\/?)(\\w[^\\s>]*)(?<!/)",
-          "end": "((?: ?/)?>)\\s*$",
+          "match": "<",
+          "name": "invalid.illegal.bad-angle-bracket.html"
+        }
+      ]
+    }
+  },
+  "patterns": [
+    {
+      "comment": "Single line strings",
+      "begin": "(\\=|\\:|\\,|\\>)\\s*(`)$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.operator.assignment.js"
+        },
+        "2": {
+          "name": "string.quoted.template.js"
+        }
+      },
+      "end": "\\s*(`)($)",
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.template.js"
+        }
+      },
+      "patterns": [
+        {
+          "comment": "It's matches only tags but not anything inside",
+          "begin": "(<\/?)\\!?(\\w[^\\s>]*)(?<!/)",
+          "end": "((?: ?/)?>)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.html"
+            },
+            "2": {
+              "name": "entity.name.tag.html"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.end.html"
+            }
+          },
           "patterns": [
             {
               "include": "text.html.basic#attribute"
             }
           ]
         }
+      ]
+    }
+  ],
+  "scopeName": "inline.es6-html"
+}
 */
