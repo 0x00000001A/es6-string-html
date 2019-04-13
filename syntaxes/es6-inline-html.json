@@ -19,66 +19,17 @@
   },
   "patterns": [
     {
-      "comment": "Case, when comma in the next line",
-      "begin": "(=|\\:|\\()?(\\s{0,}\\w{0,})(=|\\:|\\()\\s{0,}($)",
-      "beginCaptures": {
-        "1": {
-          "name": "comment.line"
-        },
-        "2": {
-          "name": "entity.name.function.js"
-        }
-      },
-      "end": "(`)",
-      "patterns": [
-        {
-          "begin": "(\\G)",
-          "end": "(`)"
-        },
-        {
-          "include": "text.html.derivative"
-        },
-        {
-          "include": "meta.tag.metadata.meta.void.htm"
-        }
-      ]
-    },
-    {
-      "comment": "Case, when comma on the same line",
-      "begin": "(=|\\:|\\()?(\\s{0,}\\w{0,})(=|\\:|\\()\\s{0,}(`)\\s{0,}($)",
-      "beginCaptures": {
-        "1": {
-          "name": "comment.line"
-        },
-        "2": {
-          "name": "entity.name.function.js"
-        }
-      },
-      "end": "(`)",
-      "patterns": [
-        {
-          "include": "text.html.derivative"
-        },
-        {
-          "include": "meta.tag.metadata.meta.void.htm"
-        }
-      ]
-    },
-    {
       "comment": "Single line strings",
-      "begin": "(=|\\:|\\()?(\\s{0,}\\w{0,})(=|\\:|\\()\\s{0,}(`)\\s{0,}(<)(\\w+)",
+      "begin": "(\\=|\\:|\\,|\\>)\\s*(`)$",
       "beginCaptures": {
-        "4": {
+        "1": {
+          "name": "entity.name.function.js"
+        },
+        "2": {
           "name": "string.quoted.template.js"
-        },
-        "5": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "6": {
-          "name": "entity.name.tag.html"
         }
       },
-      "end": "(`)",
+      "end": "\\s*(`)($)",
       "endCaptures": {
         "1": {
           "name": "string.quoted.template.js"
@@ -86,34 +37,28 @@
       },
       "patterns": [
         {
-          "include": "text.html.derivative"
+          "name": "string.quoted.template.js",
+          "match": "^\\s*([^\\<]*)\\s*$"
         },
         {
-          "include": "meta.tag.metadata.meta.void.htm"
-        },
-        {
-          "comment": "Highlight attributes",
-          "begin": "(\\w+)(=)",
+          "begin": "^\\s*(<\\!?\/?)(\\w[^\\s>]*)(?<!/)",
+          "end": "((?: ?/)?>)\\s*$",
           "beginCaptures": {
             "1": {
-              "name": "entity.other.attribute-name.html"
+              "name": "punctuation.definition.tag.begin.html"
             },
             "2": {
-              "name": "punctuation.separator.key-value.html"
+              "name": "entity.name.tag.html<"
             }
           },
-          "end": "(\")",
           "endCaptures": {
             "1": {
-              "name": "string.quoted.double.html"
+              "name": "punctuation.definition.tag.end.html"
             }
           },
           "patterns": [
             {
-              "include": "string.quoted.double.html"
-            },
-            {
-              "include": "text.html.derivative"
+              "include": "text.html.basic#attribute"
             }
           ]
         }

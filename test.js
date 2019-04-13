@@ -1,21 +1,40 @@
 // Make sure default strings are not broken
-const defaultString = "<div>Something</div>"
+const defaultString1 = "<div>Something</div>"
+const defaultString2 = `String`
+const defaultString3 = `
+asdasd asd asdas dasdasdasd '"adasjk()909 0a9sd09a sdasjkdhksja dhs
+  asdasd
+asdasd
+  'string'
+  "string"
+  <div class="asdasd">value</div>
+`
+
+const defaultString4 = `
+  <div attribute attribute="value" lastattr>asdasd</div>
+`
 
 // Check single-line HTML highlighting
 const singleLine = `<div>${div}Something</div>`
 const singleLineObj = {
-    prop: func(`<div>Something</div>`),
+    prop: func(`<div attr="adasd">asdasd</div>`),
     noHTML: `nohtml`
 }
+
+callFn(
+    "arg",
+    `<div attr="asdasd">Value</div>`
+)
 
 // Lits
 const temp = lit`
     <div>something</div>
 `
 
+const anon = () => `<div>Value</div>`
+
 // Check multiline HTML highlighting
-const multiline = 
-`
+const multiline = `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -25,20 +44,19 @@ const multiline =
         <title>Document</title>
     </head>
     <body>
-        Hello, world ${ variable }
-        ${ test() }
+        Hello, world
     </body>
     </html>
 `
 
 const multilineObj = {
-    prop: `<div att="adsasd"> ${ test() }</div>
-    `,
-    noHTML: 'nothml'
+    prop: `
+        <div att="adsasd"> ${ test() }</div>
+    `
 }
 
 // Check functions
-const checkFn = (`<div attr="value">Message</div>`.toUpperCase())
+const checkFn = temp(`<div attr="value">Message</div>`)
 
 // Misc
 function test() {
@@ -64,3 +82,26 @@ const testSQL = /* sql */`
     CREATE TABLE mytable;
     DELETE FROM mytable WHERE id = 2
 `
+
+/*
+
+        {
+          "begin": "(\\b)",
+          "end": "(\\b)",
+          "patterns": [
+            {
+              "include": "string.quoted.template.js"
+            }
+          ]
+        },
+,
+        {
+          "begin": "^\\s*(<\/?)(\\w[^\\s>]*)(?<!/)",
+          "end": "((?: ?/)?>)\\s*$",
+          "patterns": [
+            {
+              "include": "text.html.basic#attribute"
+            }
+          ]
+        }
+*/
