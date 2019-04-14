@@ -21,6 +21,30 @@
     "highlight-html": {
       "patterns": [
         {
+          "begin": "<!--",
+          "captures": [
+            {
+              "name": "punctuation.definition.comment.html"
+            }
+          ],
+          "end": "-->",
+          "name": "comment.block.html",
+          "patterns": [
+            {
+              "match": "\\G-?>",
+              "name": "invalid.illegal.characters-not-allowed-here.html"
+            },
+            {
+              "match": "<!--(?!>)|<!-(?=-->)",
+              "name": "invalid.illegal.characters-not-allowed-here.html"
+            },
+            {
+              "match": "--!>",
+              "name": "invalid.illegal.characters-not-allowed-here.html"
+            }
+          ]
+        },
+        {
           "include": "#keep-comments"
         },
         {
@@ -34,16 +58,22 @@
     "keep-comments": {
       "patterns": [
         {
-          "name": "string.quoted.template.js",
-          "match": "\\s*([^\\<]*)\\s*\\n"
+          "asdasd": "string.quoted.template.js",
+          "begin": "^",
+          "end": "$",
+          "patterns": [
+            {
+              "include": "string.quoted.template.js"
+            }
+          ]
         }
       ]
     },
     "simple-html": {
       "patterns": [
         {
-          "comment": "It's matches only tags but not anything inside",
-          "begin": "(<)\\!?([\\w\\s]*)(?<!/)((?: ?/)?>)",
+          "comment": "It's matches anything between two tags",
+          "begin": "(<\\/?)\\!?([\\w\\s]*)(?<!/)((?: ?/)?>)",
           "beginCaptures": {
             "1": {
               "name": "punctuation.definition.tag.begin.html"
@@ -52,7 +82,8 @@
               "name": "entity.name.tag.html"
             }
           },
-          "end": "(<\/)\\!?([\\w\\s]*)(?<!/)((?: ?/)?>)",
+          "keepit": "(?=(`|(<)))",
+          "end": "(?=(`|(<)))",
           "endCaptures": {
             "1": {
               "name": "punctuation.definition.tag.begin.html"
@@ -99,66 +130,20 @@
   },
   "patterns": [
     {
-      "comment": "Case: comma on the same line, but HTML is on the next line",
-      "begin": "(\\=|\\:|\\,|\\>)\\s*(`)$",
+      "comment": "Case: variable. comma on the same line, but HTML is on the next line",
+      "begin": "\\s*([_$[:alpha:]][_$[:alnum:]]*)?(\\=|\\,|\\>)\\s*(`)$",
       "beginCaptures": {
-        "1": {
+        "2": {
           "name": "keyword.operator.assignment.js"
         },
-        "2": {
-          "name": "string.quoted.template.js"
-        }
-      },
-      "end": "\\s*(`)$",
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.template.js"
-        }
-      },
-      "patterns": [
-        {
-          "include": "#highlight-html"
-        }
-      ]
-    },
-    {
-      "comment": "Case: lit",
-      "begin": "(\\s|^|\\W)([_$[:alpha:]][_$[:alnum:]]*)`",
-      "beginCaptures": {
-        "2": {
-          "name": "entity.name.function.js"
-        }
-      },
-      "end": "\\s*(`)$",
-      "endCaptures": {
-        "1": {
-          "name": "string.quoted.template.js"
-        }
-      },
-      "patterns": [
-        {
-          "include": "#highlight-html"
-        }
-      ]
-    },
-    {
-      "comment": "Case: singleline",
-      "begin": "(\\=|\\:|\\,|\\>)\\s*(`)\\s*(<)\\!?([\\w\\s]*)(?<!/)((?: ?/)?>)",
-      "beginCaptures": {
         "3": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "4": {
-          "name": "entity.name.tag.html"
+          "name": "string.quoted.template.js"
         }
       },
-      "end": "(<\/)\\!?([\\w\\s]*)(?<!/)((?: ?/)?>)\\s*(`)$",
+      "end": "\\s*\\w*(`)\\s*\\W*\\s*$",
       "endCaptures": {
         "1": {
-          "name": "punctuation.definition.tag.begin.html"
-        },
-        "2": {
-          "name": "entity.name.tag.html"
+          "name": "string.quoted.template.js"
         }
       },
       "patterns": [

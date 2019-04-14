@@ -1,27 +1,17 @@
+// In the rest:
+// comma in the next line
+// object properties
+// functions
+
 // Make sure default strings are not broken
 const defaultString1 = "<div>Something</div>"
 const defaultString2 = `String`
 const defaultString3 = `
-asdadasdadasdasdasdasdasdasdasd
-asdasdadad
-<div
-  attr="value"
-  asdasd="asdasdasd"
->
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    Hello, world
-    <div>
-      Is there something to do?
-    </div>
-</body>
-</html>
+  If the first line is a string, it will be intepritied as a comment
+  sdfsdfdsfsdf
+  asdaskjdlasjdlkasjdas
+  dasdajslkdjaslkdjalskdjasd
+  asdaslkdjaksldasdasdasdas
 `
 
 const defaultString4 = `
@@ -32,7 +22,16 @@ const value = `Nothing can be here`
 const value2 = `<div>Something</div>`
 
 const defaultString4 = `
+  asdasdas
+  asdasdasdasdajsdlasdjklasjdlajsdlasjdlasjdlasjdlasjldajsldkjasldkajsldakjsdl
   <div attribute attribute="value" lastattr>asdasd</div>
+  sadasdasdasd
+  asdasdas
+  asdasdasda
+  sdasdasdasdasdasd
+  asdasdasdasdasdasda
+  sdasdasdasdsadasdasdasd
+  asdasdasdasdasdlkjasldjalskdjalskdjalsdjalksdjalskdj
 `
 
 // Check single-line HTML highlighting
@@ -65,7 +64,12 @@ const multiline = `
         <title>Document</title>
     </head>
     <body>
+      dasdasdasdasd
+      asdasdasd
         Hello, world <span attr="value">Something</span>
+      asdasdas
+      <!-- asdlkasjdlas -->
+      asdasdasdasdasdasdasd
     </body>
     </html>
 `
@@ -73,7 +77,8 @@ const multiline = `
 const multilineObj = {
     prop: `
         <div att="adsasd"> ${ test() }</div>
-    `
+    `,
+    asd: "sadasdasd"
 }
 
 // Check functions
