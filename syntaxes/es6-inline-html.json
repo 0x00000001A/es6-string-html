@@ -19,138 +19,87 @@
       ]
     }
   },
-  "repository": {
-    "highlight-html": {
-      "patterns": [
-        {
-          "begin": "<!--",
-          "captures": [
-            {
-              "name": "punctuation.definition.comment.html"
-            }
-          ],
-          "end": "-->",
-          "name": "comment.block.html",
-          "patterns": [
-            {
-              "match": "\\G-?>",
-              "name": "invalid.illegal.characters-not-allowed-here.html"
-            },
-            {
-              "match": "<!--(?!>)|<!-(?=-->)",
-              "name": "invalid.illegal.characters-not-allowed-here.html"
-            },
-            {
-              "match": "--!>",
-              "name": "invalid.illegal.characters-not-allowed-here.html"
-            }
-          ]
-        },
-        {
-          "include": "#keep-comments"
-        },
-        {
-          "include": "#simple-html"
-        },
-        {
-          "include": "#advanced-html"
-        }
-      ]
-    },
-    "keep-comments": {
-      "patterns": [
-        {
-          "asdasd": "string.quoted.template.js",
-          "begin": "^",
-          "end": "$",
-          "patterns": [
-            {
-              "include": "string.quoted.template.js"
-            }
-          ]
-        }
-      ]
-    },
-    "simple-html": {
-      "patterns": [
-        {
-          "comment": "It's matches anything between two tags",
-          "begin": "(<\\/?)\\!?([\\w\\s]*)(?<!/)((?: ?/)?>)",
-          "beginCaptures": {
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "keepit": "(?=(`|(<)))",
-          "end": "(?=(`|(<)))",
-          "endCaptures": {
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "patterns": [
-            {
-              "include": "text.html.derivative"
-            }
-          ]
-        }
-      ]
-    },
-    "advanced-html": {
-      "patterns": [
-        {
-          "comment": "It's matches only tags but not anything inside",
-          "begin": "(<\/?)\\!?(\\w[^\\s>]*)(?<!/)",
-          "end": "((?: ?/)?>)",
-          "beginCaptures": {
-            "1": {
-              "name": "punctuation.definition.tag.begin.html"
-            },
-            "2": {
-              "name": "entity.name.tag.html"
-            }
-          },
-          "endCaptures": {
-            "1": {
-              "name": "punctuation.definition.tag.end.html"
-            }
-          },
-          "patterns": [
-            {
-              "include": "text.html.basic#attribute"
-            }
-          ]
-        }
-      ]
-    } 
-  },
   "patterns": [
     {
-      "comment": "Case: variable. comma on the same line, but HTML is on the next line",
-      "begin": "\\s*([_$[:alpha:]][_$[:alnum:]]*)?(\\=|\\,|\\>)\\s*(`)$",
+      "begin": "(\\s?\\/\\*\\s?(html|template|inline-html|inline-template)\\s?\\*\\/\\s?)(`)",
       "beginCaptures": {
-        "2": {
-          "name": "keyword.operator.assignment.js"
-        },
-        "3": {
-          "name": "string.quoted.template.js"
+        "1": {
+          "name": "comment.block"
         }
       },
-      "end": "\\s*\\w*(`)\\s*\\W*\\s*$",
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "text.html.basic"
+        },
+        {
+          "include": "inline.es6-htmlx#template"
+        }
+      ]
+    },
+    {
+      "begin": "((html|template|inline-html|inline-template))(`)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block"
+        }
+      },
+      "end": "(`)",
+      "patterns": [
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "text.html.basic"
+        },
+        {
+          "include": "inline.es6-htmlx#template"
+        }
+      ]
+    },
+    {
+      "begin": "(?<=\\s|\\,|\\=|\\:|\\(|\\$\\()\\s{0,}(((\\/\\*)|(\\/\\/))\\s?(html|template|inline-html|inline-template)\\s?\\*?\\/?$)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.line"
+        }
+      },
+      "end": "(`).*",
+      "patterns": [
+        {
+          "begin": "(\\G)",
+          "end": "(`)"
+        },
+        {
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "text.html.basic"
+        }
+      ]
+    },
+    {
+      "begin": "(\\${)",
+      "end": "(})",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.tag"
+        }
+      },
       "endCaptures": {
         "1": {
-          "name": "string.quoted.template.js"
+          "name": "entity.name.tag"
         }
       },
       "patterns": [
         {
-          "include": "#highlight-html"
+          "include": "source.ts#template-substitution-element"
+        },
+        {
+          "include": "source.js"
         }
       ]
     }

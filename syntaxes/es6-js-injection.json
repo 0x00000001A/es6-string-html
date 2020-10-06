@@ -3,7 +3,7 @@
 		"js",
 		"jsx",
 		"ts",
-		"tsx",
+		"tsx", 
 		"vue",
 		"svelte"
 	],
