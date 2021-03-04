@@ -58,6 +58,9 @@ Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before t
 
 ### [2.0.0] - 2019-04-12
 - Highlight HTML w/o comments
+
+### [2.2.0] - 2021-03-04
+- Fix highlighting for cases, when there is space right after the /*html*/ comment
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
