@@ -21,7 +21,7 @@
   },
   "patterns": [
     {
-      "begin": "(\\s?\\/\\*\\s?(html|template|inline-html|inline-template)\\s?\\*\\/\\s?)(`)",
+      "begin": "(\\s?\\/\\*\\s?(html|HTML|template|inline-html|inline-template)\\s?\\*\\/\\s?)(`)",
       "beginCaptures": {
         "1": {
           "name": "comment.block"
