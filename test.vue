@@ -26,9 +26,9 @@ export default {
         `<div>Something</div>${window}`
         )
         fn(html`<div>OK</div>`)
-        variable = /*SQL*/
+        variable = /*sql*/
         `
-        SELECT * FROM ${table}
+        SELECT * FROM ${table}\`_postfix\`
         WHERE ProductName NOT BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
         ORDER BY ProductName;
         `

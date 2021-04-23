@@ -97,12 +97,14 @@
       },
       {
         "injectTo": [
+          "source.html",
           "source.js",
           "source.js.jsx",
           "source.jsx",
-          "source.svelte",
           "source.ts",
           "source.tsx",
+          "source.vue",
+          "source.sql",
           "text.html"
         ],
         "scopeName": "inline.es6-sql",
