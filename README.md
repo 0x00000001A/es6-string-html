@@ -17,6 +17,8 @@ Adds syntax highlight support for code, placed in es6 multiline strings:
 ## Installation
 
 - Install `es6-string-html` from extensions (`ctrl + shift + x`)
+- Or download it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
+- Or download it from the [Open VSX Registry](https://open-vsx.org/extension/Tobermory/es6-string-html)
 
 ## Donation
 
