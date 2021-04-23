@@ -72,6 +72,10 @@ Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before t
 ### [2.5.1] - 2021-04-23
 - Syntax highlighting breaks with multiple placeholders in the same attribute
 - Support SVG
+
+### [2.7.0] - 2021-04-23
+## Fixed
+- SQL highlight stops after encountering an identifier delimiter `
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**

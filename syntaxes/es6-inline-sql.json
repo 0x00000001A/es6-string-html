@@ -28,12 +28,11 @@
         }
       },
       "patterns": [
-        {
-          "include": "source.ts#template-substitution-element"
-        },
-        {
-          "include": "source.sql"
-        }
+        { "include": "source.ts#template-substitution-element" },
+        { "include": "source.ts#string-character-escape" },
+        { "include": "source.sql" },
+        { "include": "source.plpgsql.postgres" },
+        { "match": "." }
       ]
     },
     {
@@ -45,12 +44,11 @@
       },
       "end": "(`)",
       "patterns": [
-        {
-          "include": "source.ts#template-substitution-element"
-        },
-        {
-          "include": "source.sql"
-        }
+        { "include": "source.ts#template-substitution-element" },
+        { "include": "source.ts#string-character-escape" },
+        { "include": "source.sql" },
+        { "include": "source.plpgsql.postgres" },
+        { "match": "." }
       ]
     },
     {
@@ -66,29 +64,6 @@
           "begin": "(\\G)",
           "end": "(`)"
         },
-        {
-          "include": "source.ts#template-substitution-element"
-        },
-        {
-          "include": "source.sql"
-        }
-      ]
-    }
-  ],
-  "scopeName": "inline.es6-sql",
-  "repository": {
-    "embedded-sql": {
-      "name": "string.template.ts",
-      "contentName": "meta.embedded.block.sql",
-      "begin": "`",
-      "beginCaptures": {
-        "0": { "name": "punctuation.definition.string.template.begin.js" }
-      },
-      "end": "`",
-      "endCaptures": {
-        "0": { "name": "punctuation.definition.string.template.end.js" }
-      },
-      "patterns": [
         { "include": "source.ts#template-substitution-element" },
         { "include": "source.ts#string-character-escape" },
         { "include": "source.sql" },
@@ -96,5 +71,6 @@
         { "match": "." }
       ]
     }
-  }
+  ],
+  "scopeName": "inline.es6-sql"
 }

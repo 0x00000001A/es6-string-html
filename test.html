@@ -36,15 +36,23 @@
             ${myArray.reduce((html, elmnt) => html + /*svg*/`<text x="0" y="0">${elmnt.txt}</text>`, '')}
         </svg>`
 
-        variable = sql`SELECT * FROM \`table\` WHERE 1=1`
+        variable = /*sql*/`SELECT * FROM \`table\` WHERE 1=1`
 
-        variable = /*SQL*/
+        variable = /*sql*/
+        `
+        SELECT -- must have whitespace [\s ] after --
+            *,
+            --123, -- double negative is positive!
+        FROM table--syntax error in mysql
+        `
+
+        variable = /*sql*/
         `
         SELECT * FROM ${table}
-        WHERE ProductName NOT BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
+        WHERE \`test\` NOT BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
         ORDER BY ProductName;
         `
-
+        
         variable = /*XML*/
         `
         <?xml version="1.0" encoding="UTF-8"?>
