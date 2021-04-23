@@ -2,7 +2,7 @@
   "name": "es6-string-html",
   "displayName": "es6-string-html",
   "description": "Syntax highlighting in es6 multiline strings",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "publisher": "Tobermory",
   "icon": "docs/logo.png",
   "engines": {
@@ -55,6 +55,25 @@
           "source.jsx",
           "source.ts",
           "source.tsx",
+          "source.vue",
+          "source.sql",
+          "text.html"
+        ],
+        "scopeName": "inline.es6-xml",
+        "path": "./syntaxes/es6-inline-xml.json",
+        "embeddedLanguages": {
+          "meta.embedded.xml": "xml"
+        }
+      },
+      {
+        "injectTo": [
+          "source.html",
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "source.vue",
           "source.sql",
           "text.html"
         ],
@@ -74,7 +93,7 @@
           "source.ts",
           "source.tsx",
           "source.vue",
-          "source.svelte",
+          "source.sql",
           "text.html"
         ],
         "scopeName": "inline.es6-html",
@@ -91,7 +110,9 @@
           "source.jsx",
           "source.ts",
           "source.tsx",
-          "source.sql"
+          "source.vue",
+          "source.sql",
+          "text.html"
         ],
         "scopeName": "inline.es6-sql",
         "path": "./syntaxes/es6-inline-sql.json",

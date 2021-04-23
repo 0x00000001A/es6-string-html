@@ -83,3 +83,7 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### [2.3.0] - 2021-04-23
 ## Improved
 - Support uppercase /* HTML */
+
+### [2.4.0] - 2021-04-23
+## Improved
+- Support XML

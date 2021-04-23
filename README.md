@@ -4,6 +4,7 @@
 Adds syntax highlight support for code, placed in es6 multiline strings:
 - HTML (incl. html quoted and unquoted attrs)
 - SQL
+- XML
 
 ## Community
 - [es6-string-css](https://github.com/bashmish/es6-string-css) - Highlight CSS in ES6 template literals
@@ -61,6 +62,9 @@ Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before t
 
 ### [2.3.0] - 2021-04-23
 - Support for uppercase /* HTML */
+
+### [2.4.0] - 2021-04-23
+- Support for XML
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**

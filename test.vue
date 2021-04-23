@@ -6,6 +6,16 @@
 export default {
     test: /*html*/`<div>OK</div>`,
     test2() {
+        let x = /*xml*/ 
+        `
+        <?xml version="1.0" encoding="UTF-8"?>
+        <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url>
+            <loc>http://www.example.com/</loc>
+        </url>
+        </urlset> 
+        `
+
         let variable = /*html*/ `<div>Test</div>${Window}`
 
         variable = /*html*/`<div>Test</div>${window}`
