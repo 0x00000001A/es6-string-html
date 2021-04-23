@@ -1,10 +1,12 @@
 # ES6 String HTML 
 > [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)
+> [Open VSX Registry](https://open-vsx.org/extension/Tobermory/es6-string-html)
 
 Adds syntax highlight support for code, placed in es6 multiline strings:
 - HTML (incl. html quoted and unquoted attrs)
 - SQL
 - XML
+- SVG
 
 ## Community
 - [es6-string-css](https://github.com/bashmish/es6-string-css) - Highlight CSS in ES6 template literals
@@ -27,7 +29,7 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 
 ## Usage
 
-Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before the string
+Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, just use the appropriate word) before the string
 (see Requirements "section" for possible values) or select
 `Insert es6-string-html comment/template` from the commands menu
 (`ctrl+shift+p` or `f1`)
@@ -36,9 +38,8 @@ Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before t
 
 ## Requirements
 
-- Visual Studio Code v1.19.0 recommended
-- Comment `/*html*/` before the string. Possible values:
-- - `/*HTML*/`
+- Visual Studio Code v1.19.0 and higher
+- Comment `/*html*/` before the string. (also works with SQL, SVG, XML, just use the appropriate word) Possible values:
 - - `/*html*/`
 - - `/*inline-html*/`
 - - `/*template*/`
@@ -50,21 +51,6 @@ Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before t
 
 ### [...]
 - See changelog for previous notes
-
-### [1.8.8] - 2019-04-12
-- Match all caps for SQL (by @thebrodmann)
-
-### [2.0.0] - 2019-04-12
-- Highlight HTML w/o comments
-
-### [2.2.0] - 2021-03-04
-- Fix highlighting for cases, when there is space right after the /*html*/ comment
-
-### [2.3.0] - 2021-04-23
-- Support for uppercase /* HTML */
-
-### [2.4.0] - 2021-04-23
-- Support for XML
 
 ### [2.5.0] - 2021-04-23
 - Ignore casing
