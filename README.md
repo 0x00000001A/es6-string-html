@@ -37,16 +37,13 @@ Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before t
 
 - Visual Studio Code v1.19.0 recommended
 - Comment `/*html*/` before the string. Possible values:
+- - `/*HTML*/`
 - - `/*html*/`
 - - `/*inline-html*/`
 - - `/*template*/`
 - - `/*inline-template*/`
 - Or
 - - `html` before the string
-
-## Keybindings
-- `ctrl+shift+h` - Insert `/*html*/`
-- `ctrl+k h` - Insert `/*html*/` \`\`
 
 ## Release Notes
 
@@ -61,6 +58,9 @@ Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before t
 
 ### [2.2.0] - 2021-03-04
 - Fix highlighting for cases, when there is space right after the /*html*/ comment
+
+### [2.3.0] - 2021-04-23
+- Support for uppercase /* HTML */
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
