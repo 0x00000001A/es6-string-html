@@ -27,7 +27,9 @@
     "es6",
     "es6-string-html",
     "html",
-    "sql"
+    "sql",
+    "xml",
+    "svg"
   ],
   "activationEvents": [
     "onCommand:es6stringhtml.insertComment",
