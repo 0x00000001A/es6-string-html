@@ -65,6 +65,13 @@ Simply insert the comment /\*html\*/ or `html` (or sql instead of html) before t
 
 ### [2.4.0] - 2021-04-23
 - Support for XML
+
+### [2.5.0] - 2021-04-23
+- Ignore casing
+
+### [2.5.1] - 2021-04-23
+- Syntax highlighting breaks with multiple placeholders in the same attribute
+- Support SVG
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**

@@ -2,7 +2,7 @@
   "name": "es6-string-html",
   "displayName": "es6-string-html",
   "description": "Syntax highlighting in es6 multiline strings",
-  "version": "2.4.0",
+  "version": "2.6.0",
   "publisher": "Tobermory",
   "icon": "docs/logo.png",
   "engines": {
@@ -78,11 +78,7 @@
           "text.html"
         ],
         "scopeName": "inline.es6-js-injection",
-        "path": "./syntaxes/es6-js-injection.json",
-        "embeddedLanguages": {
-          "meta.template.expression.ts": "typescript",
-          "meta.template.expression.js": "javascript"
-        }
+        "path": "./syntaxes/es6-js-injection.json"
       },
       {
         "injectTo": [
@@ -97,27 +93,22 @@
           "text.html"
         ],
         "scopeName": "inline.es6-html",
-        "path": "./syntaxes/es6-inline-html.json",
-        "embeddedLanguages": {
-          "meta.embedded.block.html": "html"
-        }
+        "path": "./syntaxes/es6-inline-html.json"
       },
       {
         "injectTo": [
-          "source.html",
           "source.js",
           "source.js.jsx",
           "source.jsx",
+          "source.svelte",
           "source.ts",
           "source.tsx",
-          "source.vue",
-          "source.sql",
           "text.html"
         ],
         "scopeName": "inline.es6-sql",
         "path": "./syntaxes/es6-inline-sql.json",
         "embeddedLanguages": {
-          "meta.embedded.sql": "sql"
+          "meta.embedded.block.sql": "sql"
         }
       }
     ]

@@ -87,3 +87,13 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### [2.4.0] - 2021-04-23
 ## Improved
 - Support XML
+
+### [2.5.0] - 2021-04-23
+## Fixed
+- Ignore casing
+
+### [2.6.0] - 2021-04-23
+## Fixed
+- Syntax highlighting breaks with multiple placeholders in the same attribute
+## Improved
+- Support SVG

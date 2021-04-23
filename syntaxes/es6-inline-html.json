@@ -21,7 +21,7 @@
   },
   "patterns": [
     {
-      "begin": "(\\s?\\/\\*\\s?(html|HTML|template|inline-html|inline-template)\\s?\\*\\/\\s?)(`)",
+      "begin": "(?i)(\\s?\\/\\*\\s?(html|template|inline-html|inline-template)\\s?\\*\\/\\s?)(`)",
       "beginCaptures": {
         "1": {
           "name": "comment.block"
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "begin": "((html|template|inline-html|inline-template))(`)",
+      "begin": "(?i)((html|template|inline-html|inline-template))(`)",
       "beginCaptures": {
         "1": {
           "name": "comment.block"
@@ -57,11 +57,14 @@
         },
         {
           "include": "inline.es6-htmlx#template"
+        },
+        {
+          "include": "string.quoted.other.template.js"
         }
       ]
     },
     {
-      "begin": "(?<=\\s|\\,|\\=|\\:|\\(|\\$\\()\\s{0,}(((\\/\\*)|(\\/\\/))\\s?(html|template|inline-html|inline-template)[ ]{0,1000}\\*?\\/?)[ ]{0,1000}$",
+      "begin": "(?i)(?<=\\s|\\,|\\=|\\:|\\(|\\$\\()\\s{0,}(((\\/\\*)|(\\/\\/))\\s?(html|template|inline-html|inline-template)[ ]{0,1000}\\*?\\/?)[ ]{0,1000}$",
       "beginCaptures": {
         "1": {
           "name": "comment.line"
