@@ -2,7 +2,7 @@
   "name": "es6-string-html",
   "displayName": "es6-string-html",
   "description": "Syntax highlighting in es6 multiline strings",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "publisher": "Tobermory",
   "icon": "docs/logo.png",
   "engines": {

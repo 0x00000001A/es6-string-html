@@ -65,6 +65,10 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [2.7.0] - 2021-04-23
 ## Fixed
 - SQL highlight stops after encountering an identifier delimiter `
+
+### [2.8.0] - 2021-04-23
+## Fixed
+- SQL support for vue files
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
