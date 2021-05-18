@@ -105,3 +105,7 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### [2.8.0] - 2021-04-23
 ## Fixed
 - SQL support for vue files
+
+### [2.9.0] - 2021-05-18
+## Improved
+- CSS support

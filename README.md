@@ -8,6 +8,7 @@ Adds syntax highlight support for code, placed in es6 multiline strings:
 - SQL
 - XML
 - SVG
+- CSS
 
 ## Community
 - [es6-string-css](https://github.com/bashmish/es6-string-css) - Highlight CSS in ES6 template literals
@@ -42,7 +43,8 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ## Requirements
 
 - Visual Studio Code v1.19.0 and higher
-- Comment `/*html*/` before the string. (also works with SQL, SVG, XML, just use the appropriate word) Possible values:
+- Comment `/*html*/` before the string. (also works with CSS, SQL, SVG, XML, just use the appropriate word) Possible values:
+- - `/*css*/`
 - - `/*html*/`
 - - `/*inline-html*/`
 - - `/*template*/`
@@ -55,13 +57,6 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [...]
 - See changelog for previous notes
 
-### [2.5.0] - 2021-04-23
-- Ignore casing
-
-### [2.6.0] - 2021-04-23
-- Syntax highlighting breaks with multiple placeholders in the same attribute
-- Support SVG
-
 ### [2.7.0] - 2021-04-23
 ## Fixed
 - SQL highlight stops after encountering an identifier delimiter `
@@ -69,6 +64,10 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [2.8.0] - 2021-04-23
 ## Fixed
 - SQL support for vue files
+
+### [2.9.0] - 2021-05-18
+## Improved
+- CSS support
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
