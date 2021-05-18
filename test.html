@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .className {
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <script>
+        /**
+            source.css
+            meta.embedded.block.html
+            text.html.derivative
+        */
         let variable = /*html*/ `
             <div attr="${test}asd${test}">Test</div>${Window}
+        `
+
+        variable = /*css*/`
+        .className {
+            color: red;
+        }
         `
 
         variable = /*html*/`<div attr="asdasd">Test</div>${window}`
@@ -31,9 +47,11 @@
         )
         fn(html`<div>OK</div>`)
 
+        variable = /*svg*/`<text x="${test}0" y="0">${elmnt.txt}</text>`
+
         variable = /*SVG*/`
         <svg viewBox="0 0 100 100">
-            ${myArray.reduce((html, elmnt) => html + /*svg*/`<text x="0" y="0">${elmnt.txt}</text>`, '')}
+            ${myArray.reduce((html, elmnt) => html + /*svg*/`<text x="${test}0" y="0">${elmnt.txt}</text>`, '')}
         </svg>`
 
         variable = /*sql*/`SELECT * FROM \`table\` WHERE 1=1`

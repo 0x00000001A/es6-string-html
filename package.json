@@ -59,6 +59,25 @@
           "source.tsx",
           "source.vue",
           "source.sql",
+          "source.css",
+          "text.html"
+        ],
+        "scopeName": "inline.es6-css",
+        "path": "./syntaxes/es6-inline-css.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.html": "html"
+        }
+      },
+      {
+        "injectTo": [
+          "source.html",
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "source.vue",
+          "source.sql",
           "text.html"
         ],
         "scopeName": "inline.es6-xml",
