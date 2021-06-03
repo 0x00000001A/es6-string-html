@@ -9,11 +9,18 @@ Adds syntax highlight support for code, placed in es6 multiline strings:
 - XML
 - SVG
 - CSS
+- GLSL
 
 ## Community
 - [es6-string-css](https://github.com/bashmish/es6-string-css) - Highlight CSS in ES6 template literals
 - [python-string-sql](https://github.com/ptweir/python-string-sql) - Highlight SQL code in python multiline strings
 - [es6-string-javascript](https://github.com/Zjcompt/es6-string-javascript) - Highlight JS in multiline strings
+
+## Contributors
+[![guicook](https://img.shields.io/badge/gucook-❤-brightgreen)](https://github.com/guycook)
+[![RobertSasak](https://img.shields.io/badge/RobertSasak-❤-brightgreen)](https://github.com/RobertSasak)
+[![the-dr-lazy](https://img.shields.io/badge/the--dr--lazy-❤-brightgreen)](https://github.com/the-dr-lazy)
+[![yozman](https://img.shields.io/badge/yozman-❤-brightgreen)](https://github.com/yozman)
 
 ## Installation
 
@@ -68,6 +75,10 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [2.9.0] - 2021-05-18
 ## Improved
 - CSS support
+
+### [2.10.0] - 2021-06-03
+## Improved
+- GLSL support
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
