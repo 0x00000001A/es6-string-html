@@ -21,6 +21,7 @@ Adds syntax highlight support for code, placed in es6 multiline strings:
 [![RobertSasak](https://img.shields.io/badge/RobertSasak-❤-brightgreen)](https://github.com/RobertSasak)
 [![the-dr-lazy](https://img.shields.io/badge/the--dr--lazy-❤-brightgreen)](https://github.com/the-dr-lazy)
 [![yozman](https://img.shields.io/badge/yozman-❤-brightgreen)](https://github.com/yozman)
+[![JohnnyLufa](https://img.shields.io/badge/JohnnyLufa-❤-brighten)](https://github.com/JohnnyLufa)
 
 ## Installation
 
