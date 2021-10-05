@@ -113,3 +113,7 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### [2.10.0] - 2021-06-03
 ## Improved
 - GLSL support
+
+### [2.11.0] - 2021-10-05
+## Improved
+- PHP file support

@@ -3,9 +3,11 @@
 		"js",
 		"jsx",
 		"ts",
-		"tsx", 
+		"tsx",
+		"html",
 		"vue",
-		"svelte"
+		"svelte",
+		"php"
 	],
 	"injectionSelector": "L:source.js (string.quoted.double.html, string.quoted.single.html), L:source.jsx (string.quoted.double.html, string.quoted.single.html), L:source.js.jsx (string.quoted.double.html, string.quoted.single.html), L:source.ts (string.quoted.double.html, string.quoted.single.html), L:source.tsx (string.quoted.double.html, string.quoted.single.html)",
 	"patterns": [

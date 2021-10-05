@@ -1,36 +1,69 @@
-'use strict';
+import * as vscode from 'vscode';
 
-var vscode = require('vscode')
+const typeScriptExtensionId = 'vscode.typescript-language-features';
+const pluginId = 'typescript-lit-html-plugin';
+const configurationSection = 'lit-html';
 
-function activate(context) {
-  context.subscriptions.push(
-    vscode.commands.registerCommand("es6stringhtml.insertComment", () => insertString()),
-    vscode.commands.registerCommand("es6stringhtml.insertTemplate", () => insertString(true)),
-  )
+export async function activate(context) {
+  const extension = vscode.extensions.getExtension(typeScriptExtensionId);
+
+  if (!extension) {
+    return;
+  }
+
+  await extension.activate();
+
+  if (!extension.exports || !extension.exports.getAPI) {
+    return;
+  }
+
+  const api = extension.exports.getAPI(0);
+
+  if (!api) {
+    return;
+  }
+
+  vscode.workspace.onDidChangeConfiguration(e => {
+    if (e.affectsConfiguration(configurationSection)) {
+      synchronizeConfiguration(api);
+    }
+  }, undefined, context.subscriptions);
+
+  synchronizeConfiguration(api);
 }
 
-function deactivate() {
-  // nothing to dispose
+function synchronizeConfiguration(api) {
+  api.configurePlugin(pluginId, getConfiguration());
 }
 
-/**
- * Insert comment or comment with string in editor
- * @param {boolean} full
- */
-function insertString (full) {
-  const string = full ? '/*html*/ ``' : '/*html*/'
-  const editor = vscode.window.activeTextEditor
-  const selections = editor.selections
+function getConfiguration() {
+  const config = vscode.workspace.getConfiguration(configurationSection);
+  const outConfig = {
+    format: {}
+  };
 
-  editor.edit((editBuilder) => {
-    selections.forEach((selection) => {
-      editBuilder.replace(selection, '')
-      editBuilder.insert(selection.active, string)
-    })
-  })
+  withConfigValue(config, 'tags', tags => { outConfig.tags = tags; });
+  withConfigValue(config, 'format.enabled', enabled => { outConfig.format.enabled = enabled; });
+
+  return outConfig;
 }
 
-module.exports = {
-  activate: activate,
-  deactivate: deactivate
+function withConfigValue(config, key, withValue) {
+  const configSetting = config.inspect(key);
+  
+  if (!configSetting) {
+    return;
+  }
+
+  // Make sure the user has actually set the value.
+  // VS Code will return the default values instead of `undefined`, even if user has not don't set anything.
+  if (typeof configSetting.globalValue === 'undefined' && typeof configSetting.workspaceFolderValue === 'undefined' && typeof configSetting.workspaceValue === 'undefined') {
+    return;
+  }
+
+  const value = config.get(key, undefined);
+
+  if (typeof value !== 'undefined') {
+    withValue(value);
+  }
 }

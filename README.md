@@ -79,6 +79,10 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [2.10.0] - 2021-06-03
 ## Improved
 - GLSL support
+
+### [2.11.0] - 2021-10-05
+## Improved
+- PHP files support
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
