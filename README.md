@@ -12,7 +12,6 @@ Adds syntax highlight support for code, placed in es6 multiline strings:
 - GLSL
 
 ## Community
-- [es6-string-css](https://github.com/bashmish/es6-string-css) - Highlight CSS in ES6 template literals
 - [python-string-sql](https://github.com/ptweir/python-string-sql) - Highlight SQL code in python multiline strings
 - [es6-string-javascript](https://github.com/Zjcompt/es6-string-javascript) - Highlight JS in multiline strings
 
