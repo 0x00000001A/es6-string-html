@@ -36,7 +36,7 @@
       ]
     },
     {
-      "begin": "((xml|inline-xml))(`)",
+      "begin": "(?i)(\\s*(xml|inline-xml))(`)",
       "beginCaptures": {
         "1": {
           "name": "comment.block"
