@@ -42,7 +42,7 @@
       ]
     },
     {
-      "begin": "(?i)((css|inline-css))(`)",
+      "begin": "(?i)(\\s*(css|inline-css))(`)",
       "beginCaptures": {
         "1": {
           "name": "comment.block"

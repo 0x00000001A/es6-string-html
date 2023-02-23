@@ -42,7 +42,7 @@
       ]
     },
     {
-      "begin": "(?i)((glsl|inline-glsl))(`)",
+      "begin": "(?i)(\\s*(glsl|inline-glsl))(`)",
       "beginCaptures": {
         "1": {
           "name": "comment.block"

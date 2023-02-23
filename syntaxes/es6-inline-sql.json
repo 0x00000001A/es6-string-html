@@ -22,7 +22,7 @@
   },
   "patterns": [
     {
-      "begin": "(?i)(.?(sql))(`)",
+      "begin": "(?i)(\\s*(sql))(`)",
       "end": "(`)",
       "beginCaptures": {
         "1": {
