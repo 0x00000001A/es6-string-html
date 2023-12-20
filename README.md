@@ -10,6 +10,7 @@ Adds syntax highlight support for code, placed in es6 multiline strings:
 - SVG
 - CSS
 - GLSL
+- JavaScript/TypeScript
 
 ## Community
 - [python-string-sql](https://github.com/ptweir/python-string-sql) - Highlight SQL code in python multiline strings
@@ -50,12 +51,14 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ## Requirements
 
 - Visual Studio Code v1.19.0 and higher
-- Comment `/*html*/` before the string. (also works with CSS, SQL, SVG, XML, just use the appropriate word) Possible values:
+- Comment `/*html*/` before the string. (also works with CSS, SQL, SVG, XML, JavaScript, just use the appropriate word) Possible values:
 - - `/*css*/`
 - - `/*html*/`
 - - `/*inline-html*/`
 - - `/*template*/`
 - - `/*inline-template*/`
+- - `/*javascript*/` or `/*js*/`
+- - `/*typescript*/` or `/*ts*/`
 - Or
 - - `html` before the string
 
