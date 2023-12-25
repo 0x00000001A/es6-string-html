@@ -47,6 +47,30 @@ export default {
         </url>
         </urlset> 
         `
+
+        variable = /*javascript*/
+        `
+        function hello(){
+            console.log("Hello World!")
+        }
+        `
+
+        variable = /*js*/
+        `
+        function hello(){
+            console.log("Hello World!")
+        }
+        `
+
+        variable = /*typescript*/`
+        function hello(name: string){
+            console.log("Hello " + name + "!")
+        }`
+
+        variable = /*ts*/`
+        function hello(name: string){
+            console.log("Hello " + name + "!")
+        }`
     },
     test: 'asdas'
 }

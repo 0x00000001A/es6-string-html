@@ -157,7 +157,26 @@
 				"embeddedLanguages": {
 					"meta.embedded.block.sql": "sql"
 				}
-			}
+			},
+			{
+				"injectTo": [
+					"source.html",
+					"source.js",
+					"source.js.jsx",
+					"source.jsx",
+					"source.ts",
+					"source.tsx",
+					"source.vue",
+					"source.svelte",
+					"source.sql",
+					"text.html"
+				],
+				"scopeName": "inline.es6-javascript",
+				"path": "./syntaxes/es6-inline-javascript.json",
+				"embeddedLanguages": {
+				  "meta.embedded.block.javascript": "javascript"
+				}
+			  }
 		]
 	},
 	"__metadata": {

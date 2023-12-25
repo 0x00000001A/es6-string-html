@@ -29,6 +29,28 @@
             <loc>http://www.example.com/</loc>
         </url>
         </urlset> 
+        `,
+        /*js*/
         `
+        function hello(){
+            console.log("Hello World!")
+        }
+        `,
+        /*javascript*/
+        `
+        function hello(){
+            console.log("Hello World!")
+        }
+        `,
+        /*ts*/
+        `
+        function hello(name: string){
+            console.log("Hello " + name + "!")
+        }`,
+        /*typescript*/
+        `
+        function hello(name: string){
+            console.log("Hello " + name + "!")
+        }`
     ]
 </script>
