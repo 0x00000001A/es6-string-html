@@ -117,3 +117,8 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### [2.11.0] - 2021-10-05
 ## Improved
 - PHP file support
+
+
+### [2.12.0] - 2021-10-05
+## Fixed
+- Fixes issues with trailing syntax in single-line "sql" syntax shown in issue. And also adds support for Prisma and other ORMs that use "xxxxx.sql" syntax. Author: [@jdukleth](https://github.com/jdukleth)

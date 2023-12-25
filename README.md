@@ -16,13 +16,6 @@ Adds syntax highlight support for code, placed in es6 multiline strings:
 - [python-string-sql](https://github.com/ptweir/python-string-sql) - Highlight SQL code in python multiline strings
 - [es6-string-javascript](https://github.com/Zjcompt/es6-string-javascript) - Highlight JS in multiline strings
 
-## Contributors
-[![guicook](https://img.shields.io/badge/gucook-❤-brightgreen)](https://github.com/guycook)
-[![RobertSasak](https://img.shields.io/badge/RobertSasak-❤-brightgreen)](https://github.com/RobertSasak)
-[![the-dr-lazy](https://img.shields.io/badge/the--dr--lazy-❤-brightgreen)](https://github.com/the-dr-lazy)
-[![yozman](https://img.shields.io/badge/yozman-❤-brightgreen)](https://github.com/yozman)
-[![JohnnyLufa](https://img.shields.io/badge/JohnnyLufa-❤-brighten)](https://github.com/JohnnyLufa)
-
 ## Installation
 
 - Install `es6-string-html` from extensions (`ctrl + shift + x`)
@@ -67,10 +60,6 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [...]
 - See changelog for previous notes
 
-### [2.7.0] - 2021-04-23
-## Fixed
-- SQL highlight stops after encountering an identifier delimiter `
-
 ### [2.8.0] - 2021-04-23
 ## Fixed
 - SQL support for vue files
@@ -86,6 +75,10 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [2.11.0] - 2021-10-05
 ## Improved
 - PHP files support
+
+### [2.13.1] - 2023-12-14
+## Fixed
+- Fixes issues with trailing syntax in single-line "sql" syntax shown in issue. And also adds support for Prisma and other ORMs that use "xxxxx.sql" syntax. Author: [@jdukleth](https://github.com/jdukleth)
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
