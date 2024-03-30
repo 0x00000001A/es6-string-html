@@ -10,51 +10,78 @@
             color: red;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <script>
+
+
+        // make the tests actually run in the browser
+        const inBrowser = true;
+        const test = `I'm a test string`;
+        const elm = /*html*/ `<div></div>`;
+        const deep = { test: /*html*/ `<div>going deep</div>` };
+        const table = 'myTable';
+        const myArray = [
+            { txt: /*html*/ `<div>1</div>` }, 
+            { txt: /*html*/ `<div>2</div>` }, 
+            { txt: /*html*/ `<div>3</div>` }
+        ];
+
         /**
             source.css
             meta.embedded.block.html
             text.html.derivative
         */
         let variable = /*html*/ `
-            <div attr="${test}asd${test}">Test</div>${Window}
-        `
+            <div attr="${test}asd${test}">Test</div>${elm}
+        `;
 
         variable = /*css*/`
         .className {
             color: red;
         }
-        `
+        `;
 
-        variable = /*html*/`<div attr="asdasd">Test</div>${window}`
+        variable = /*html*/`<div attr="asdasd">Test</div>${elm}`;
 
         variable = //html
         `
-        <div>Test</div>${Window}
-        `
+        <div>Test</div>${elm}
+        `;
 
         variable = /*html*/ 
         `
-        <div>Test</div>${Window}
-        `
+        <div>Test</div>${elm}
+        `;
 
-        const fn = (param) => param;
-        const html = (param) => html`<div>Something</div>`
-        fn(//html
-        `<div>Something</div>${window}`
-        )
-        fn(html`<div>OK</div>`)
+        if(!inBrowser){
 
-        variable = /*svg*/`<text x="${test}0" y="0">${elmnt.txt}</text>`
+            // html` and similar will fail in the browser
+            // this can only be used with a transpiler
+
+            const fn = (param) => param;
+
+            const html = (param) => html`<div>Something</div>`;
+
+            fn(//html
+            `<div>Something</div>${elm}`
+            );
+
+            fn(html`<div>OK</div>`);
+
+        }
+
+
+
+        variable = /*svg*/`<text x="${test}0" y="0">${deep.test}</text>`;
 
         variable = /*SVG*/`
         <svg viewBox="0 0 100 100">
             ${myArray.reduce((html, elmnt) => html + /*svg*/`<text x="${test}0" y="0">${elmnt.txt}</text>`, '')}
-        </svg>`
+        </svg>`;
 
-        variable = /*sql*/`SELECT * FROM \`table\` WHERE 1=1`
+        variable = /*sql*/`SELECT * FROM \`table\` WHERE 1=1`;
 
         variable = /*sql*/
         `
@@ -62,14 +89,14 @@
             *,
             --123, -- double negative is positive!
         FROM table--syntax error in mysql
-        `
+        `;
 
         variable = /*sql*/
         `
         SELECT * FROM ${table}
         WHERE \`test\` NOT BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
         ORDER BY ProductName;
-        `
+        `;
         
         variable = /*XML*/
         `
@@ -79,31 +106,47 @@
             <loc>http://www.example.com/</loc>
         </url>
         </urlset> 
-        `
+        `;
 
         variable = /*javascript*/
         `
         function hello(){
             console.log("Hello World!")
         }
-        `
+        `;
 
         variable = /*js*/
         `
         function hello(){
             console.log("Hello World!")
         }
-        `
+        `;
 
         variable = /*typescript*/`
         function hello(name: string){
             console.log("Hello " + name + "!")
-        }`
+        }`;
 
         variable = /*ts*/`
         function hello(name: string){
             console.log("Hello " + name + "!")
-        }`
+        }`;
+
+        // test jQuery
+        const $jQueryTest = $(`
+        <div>
+            <h1>Test Header</h1>
+            <p>${test}</p>
+            <p>${deep.test}</p>
+
+        </div>
+        `);
+
+        const $body = $('body');
+
+        $jQueryTest.appendTo($body);
+
+
     </script>
 </body>
 </html>
