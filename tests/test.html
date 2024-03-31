@@ -132,6 +132,11 @@
             console.log("Hello " + name + "!")
         }`;
 
+        const $body = $('body');
+
+        $jQueryTest.appendTo($body);
+
+
         // test jQuery
         const $jQueryTest = $(`
         <div>
@@ -142,9 +147,16 @@
         </div>
         `);
 
-        const $body = $('body');
+        const $jQueryTest2 = $(`
+        <div>
+            <h1>Test Header 2</h1>
+            <p>${test}</p>
+            <p>${deep.test}</p>
 
-        $jQueryTest.appendTo($body);
+        </div>
+        `).appendTo($body);
+
+
 
 
     </script>
