@@ -109,7 +109,7 @@
     },
     {
       "begin": "(\\$\\(`)",
-      "end": "(`\\);)",
+      "end": "(`\\))",
       "beginCaptures": {
         "1": {
           "name": "entity.name.tag"
