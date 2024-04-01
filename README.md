@@ -83,6 +83,10 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [2.14.1] - 2023-12-26
 ## Improved
 - Add ts/js support. Author: [@tomgao365](https://github.com/tomgao365)
+
+### [2.15.0] - 2024-04-01
+## Added
+- Support for html within jQuery without the need for comments. Author: [@scottforte](https://github.com/scottforte)
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
