@@ -61,7 +61,7 @@
 					"source.svelte",
 					"source.sql",
 					"source.css",
-          "source.rescript",
+					"source.rescript",
 					"text.html"
 				],
 				"scopeName": "inline.es6-css",
@@ -81,7 +81,7 @@
 					"source.vue",
 					"source.svelte",
 					"source.sql",
-          "source.rescript",
+					"source.rescript",
 					"text.html"
 				],
 				"scopeName": "inline.es6-glsl",
@@ -101,7 +101,7 @@
 					"source.vue",
 					"source.svelte",
 					"source.sql",
-          "source.rescript",
+					"source.rescript",
 					"text.html"
 				],
 				"scopeName": "inline.es6-xml",
@@ -121,7 +121,7 @@
 					"source.vue",
 					"source.svelte",
 					"source.sql",
-          "source.rescript",
+					"source.rescript",
 					"text.html"
 				],
 				"scopeName": "inline.es6-js-injection",
@@ -138,6 +138,7 @@
 					"source.vue",
 					"source.svelte",
 					"source.sql",
+					"source.rescript",
 					"text.html"
 				],
 				"scopeName": "inline.es6-html",
@@ -154,7 +155,7 @@
 					"source.vue",
 					"source.svelte",
 					"source.sql",
-          "source.rescript",
+					"source.rescript",
 					"text.html"
 				],
 				"scopeName": "inline.es6-sql",
@@ -174,7 +175,7 @@
 					"source.vue",
 					"source.svelte",
 					"source.sql",
-          "source.rescript",
+					"source.rescript",
 					"text.html"
 				],
 				"scopeName": "inline.es6-javascript",
