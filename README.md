@@ -87,6 +87,10 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [2.15.0] - 2024-04-01
 ## Added
 - Support for html within jQuery without the need for comments. Author: [@scottforte](https://github.com/scottforte)
+
+### [2.16.0] - 2024-07-14
+## Added
+- Support ReScript syntax. Author: [mrmurphy](https://github.com/mrmurphy)
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**

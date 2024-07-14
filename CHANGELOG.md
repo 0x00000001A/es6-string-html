@@ -129,3 +129,7 @@ The format is based on [Keep a Changelog] (http://keepachangelog.com/en/1.0.0/) 
 ### [2.15.0] - 2024-04-01
 ## Added
 - Support for html within jQuery without the need for comments. Author: [@scottforte](https://github.com/scottforte)
+
+### [2.16.0] - 2024-07-14
+## Added
+- Support ReScript syntax. Author: [mrmurphy](https://github.com/mrmurphy)
