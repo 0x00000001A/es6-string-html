@@ -37,6 +37,9 @@
             <div attr="${test}asd${test}">Test</div>${elm}
         `;
 
+        variable = /* markdown */`this **is** ${test} _markdown_ `;
+        variable = /* md */`this **is** _markdown_`;
+
         variable = /*css*/`
         .className {
             color: red;
@@ -63,6 +66,16 @@
             const fn = (param) => param;
 
             const html = (param) => html`<div>Something</div>`;
+            const markdown = (param) => html`<div>Something</div>`;
+
+            fn(markdown`
+--- Hello
+hello **what is this**
+
+1. foo
+1. bar
+1. baz
+            `);
 
             fn(//html
             `<div>Something</div>${elm}`

@@ -64,6 +64,27 @@
 					"source.rescript",
 					"text.html"
 				],
+				"scopeName": "inline.es6-markdown",
+				"path": "./syntaxes/es6-inline-markdown.json",
+				"embeddedLanguages": {
+					"meta.embedded.markdown": "markdown"
+				}
+			},
+			{
+				"injectTo": [
+					"source.html",
+					"source.js",
+					"source.js.jsx",
+					"source.jsx",
+					"source.ts",
+					"source.tsx",
+					"source.vue",
+					"source.svelte",
+					"source.sql",
+					"source.css",
+					"source.rescript",
+					"text.html"
+				],
 				"scopeName": "inline.es6-css",
 				"path": "./syntaxes/es6-inline-css.json",
 				"embeddedLanguages": {
