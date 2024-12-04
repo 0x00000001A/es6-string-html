@@ -60,10 +60,6 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [...]
 - See changelog for previous notes
 
-### [2.8.0] - 2021-04-23
-## Fixed
-- SQL support for vue files
-
 ### [2.9.0] - 2021-05-18
 ## Improved
 - CSS support
@@ -91,6 +87,10 @@ Simply insert the comment /\*html\*/ or `html` (also works with SQL, SVG, XML, j
 ### [2.16.0] - 2024-07-14
 ## Added
 - Support ReScript syntax. Author: [mrmurphy](https://github.com/mrmurphy)
+
+### [2.17.0] - 2024-12-04
+## Added
+- Support Markdown (MD) syntax. Author: [aslushnikov](https://github.com/aslushnikov)
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**
